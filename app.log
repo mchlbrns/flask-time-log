@@ -1,0 +1,718 @@
+2024-09-24 07:01:34,862 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8003
+ * Running on http://192.168.103.51:8003
+2024-09-24 07:01:34,862 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-09-24 07:01:43,007 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 07:01:43] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-24 07:01:47,158 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 07:01:47] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-24 07:01:49,573 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 07:01:49] "GET /attendance/export HTTP/1.1" 200 -
+2024-09-24 07:05:05,954 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8003
+ * Running on http://192.168.103.51:8003
+2024-09-24 07:05:05,954 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-09-24 07:05:10,546 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 07:05:10] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-24 07:05:21,624 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 07:05:21] "GET /attendance/export HTTP/1.1" 200 -
+2024-09-24 07:05:43,330 WARNING app Thread-3 (process_request_thread) : Forbidden access attempt from IP: 112.198.104.208
+2024-09-24 07:05:43,332 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 07:05:43] "[31m[1mGET /attendance HTTP/1.1[0m" 403 -
+2024-09-24 07:05:43,553 WARNING app Thread-4 (process_request_thread) : Forbidden access attempt from IP: 112.198.104.208
+2024-09-24 07:05:43,553 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 07:05:43] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 403 -
+2024-09-24 07:11:10,833 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 07:11:10] "GET /attendance/export HTTP/1.1" 200 -
+2024-09-24 10:41:24,475 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:41:24] "GET /attendance HTTP/1.1" 200 -
+2024-09-24 10:41:24,476 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:41:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-09-24 10:41:24,911 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:41:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-09-24 10:41:29,036 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:41:29] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-24 10:41:29,314 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:41:29] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-24 10:41:51,112 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:41:51] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-24 10:41:51,470 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:41:51] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-24 10:42:27,282 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:42:27] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-24 10:42:43,100 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:42:43] "GET /attendance HTTP/1.1" 200 -
+2024-09-24 10:42:50,855 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:42:50] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-24 10:43:47,390 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:43:47] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-24 10:43:47,595 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:43:47] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-24 10:43:55,001 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:43:55] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-24 10:43:55,208 INFO werkzeug Thread-19 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:43:55] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-24 10:47:51,332 INFO werkzeug Thread-20 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:47:51] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-24 10:47:51,550 INFO werkzeug Thread-21 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:47:51] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-24 10:48:02,470 INFO werkzeug Thread-22 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:48:02] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-24 10:48:05,880 INFO werkzeug Thread-23 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:48:05] "GET /attendance HTTP/1.1" 200 -
+2024-09-24 10:48:25,002 INFO werkzeug Thread-24 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:48:25] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-24 10:48:25,205 INFO werkzeug Thread-25 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:48:25] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-24 10:48:47,941 INFO werkzeug Thread-26 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:48:47] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-24 10:48:48,152 INFO werkzeug Thread-27 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:48:48] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-24 10:49:43,570 INFO werkzeug Thread-28 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:49:43] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-24 10:49:43,789 INFO werkzeug Thread-29 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:49:43] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-24 10:50:35,986 INFO werkzeug Thread-30 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:50:35] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-24 10:50:38,666 INFO werkzeug Thread-31 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:50:38] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-24 10:50:44,821 INFO werkzeug Thread-32 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:50:44] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-24 10:50:46,155 INFO werkzeug Thread-33 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:50:46] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-24 10:50:46,364 INFO werkzeug Thread-34 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:50:46] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-24 10:50:47,054 INFO werkzeug Thread-35 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:50:47] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-24 10:50:47,267 INFO werkzeug Thread-36 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:50:47] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-24 10:50:55,228 INFO werkzeug Thread-37 (process_request_thread) : 127.0.0.1 - - [24/Sep/2024 10:50:55] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-25 22:14:18,797 WARNING app Thread-38 (process_request_thread) : Forbidden access attempt from IP: 127.0.0.1
+2024-09-25 22:14:18,797 INFO werkzeug Thread-38 (process_request_thread) : 127.0.0.1 - - [25/Sep/2024 22:14:18] "[31m[1mGET /attendance/report HTTP/1.1[0m" 403 -
+2024-09-25 22:14:18,877 WARNING app Thread-39 (process_request_thread) : Forbidden access attempt from IP: 127.0.0.1
+2024-09-25 22:14:18,877 INFO werkzeug Thread-39 (process_request_thread) : 127.0.0.1 - - [25/Sep/2024 22:14:18] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 403 -
+2024-09-26 01:29:37,198 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8003
+ * Running on http://192.168.103.51:8003
+2024-09-26 01:29:37,198 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-09-26 01:30:01,275 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:30:01] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 01:30:01,364 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:30:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-09-26 01:30:05,737 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:30:05] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 01:30:05,745 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:30:05] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 01:30:50,149 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8003
+ * Running on http://192.168.103.51:8003
+2024-09-26 01:30:50,149 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-09-26 01:30:57,483 ERROR app Thread-1 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-25T22:30:57.249654+05:0'
+2024-09-26 01:30:57,484 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:30:57] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 01:30:57,490 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:30:57] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 01:31:05,091 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:31:05] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 01:31:23,806 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:31:23] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-26 01:31:23,825 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:31:23] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 01:32:11,750 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:32:11] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 01:38:49,614 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:38:49] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 01:38:54,154 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:38:54] "[32mGET /attendance/logout HTTP/1.1[0m" 302 -
+2024-09-26 01:38:54,159 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:38:54] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 01:38:55,546 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:38:55] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 01:38:59,249 ERROR app Thread-12 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-25T22:38:59.011588+05:0'
+2024-09-26 01:38:59,250 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:38:59] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 01:38:59,254 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:38:59] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 01:39:03,655 ERROR app Thread-14 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-25T22:39:03.418295+05:0'
+2024-09-26 01:39:03,656 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:39:03] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 01:39:03,659 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:39:03] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 01:43:34,810 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8003
+ * Running on http://192.168.103.51:8003
+2024-09-26 01:43:34,810 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-09-26 01:43:41,523 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:43:41] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 01:43:45,091 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:43:45] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 01:43:45,098 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:43:45] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 01:44:05,542 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:44:05] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 01:44:08,069 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:44:08] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 01:44:10,776 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:44:10] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 01:44:10,781 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:44:10] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 01:44:16,360 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8003
+ * Running on http://192.168.103.51:8003
+2024-09-26 01:44:16,360 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-09-26 01:44:19,774 ERROR app Thread-1 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-25T22:44:19.534857+05:0'
+2024-09-26 01:44:19,780 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:44:19] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 01:44:19,786 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:44:19] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 01:44:27,242 ERROR app Thread-3 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-25T22:44:26.986737+05:0'
+2024-09-26 01:44:27,246 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:44:27] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 01:44:27,249 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:44:27] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 01:44:31,602 ERROR app Thread-5 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-25T22:44:31.362291+05:0'
+2024-09-26 01:44:31,606 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:44:31] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 01:44:31,609 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:44:31] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 01:44:36,359 ERROR app Thread-7 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-25T22:44:36.120108+05:0'
+2024-09-26 01:44:36,363 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:44:36] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 01:44:36,367 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:44:36] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 01:45:13,068 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:45:13] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 01:45:16,373 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:45:16] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-26 01:45:16,389 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:45:16] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 01:50:00,787 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8003
+ * Running on http://192.168.103.51:8003
+2024-09-26 01:50:00,787 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-09-26 01:50:04,807 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:50:04] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 01:50:10,932 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:50:10] "GET /attendance/purge_duplicates HTTP/1.1" 200 -
+2024-09-26 01:50:12,138 ERROR app Thread-3 (process_request_thread) : Exception on /attendance/purge_duplicates [POST]
+Traceback (most recent call last):
+  File "D:\attendance\venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\attendance\venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\attendance\venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\attendance\venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\attendance\app.py", line 124, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\attendance\app.py", line 134, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\attendance\app.py", line 547, in purge_duplicates
+    success, message = purge_duplicate_actions()
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'purge_duplicate_actions' is not defined. Did you mean: 'purge_duplicates'?
+2024-09-26 01:50:12,141 ERROR app Thread-3 (process_request_thread) : Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-09-26 01:50:12,143 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:50:12] "[35m[1mPOST /attendance/purge_duplicates HTTP/1.1[0m" 500 -
+2024-09-26 01:50:15,134 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:50:15] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 01:50:16,798 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:50:16] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 01:50:22,086 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:50:22] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-26 01:50:22,091 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:50:22] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 01:50:27,116 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:50:27] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-26 01:50:27,127 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:50:27] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 01:50:37,653 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8003
+ * Running on http://192.168.103.51:8003
+2024-09-26 01:50:37,653 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-09-26 01:50:37,654 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 01:50:38,298 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 01:50:38,300 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 01:50:40,214 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:50:40] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 01:50:46,820 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:50:46] "GET /attendance/purge_duplicates HTTP/1.1" 200 -
+2024-09-26 01:50:53,052 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:50:53] "[35m[1mPOST /attendance/purge_duplicates HTTP/1.1[0m" 500 -
+2024-09-26 01:50:53,074 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:50:53] "GET /attendance/purge_duplicates?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-09-26 01:50:53,075 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:50:53] "GET /attendance/purge_duplicates?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-09-26 01:50:53,079 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:50:53] "GET /attendance/purge_duplicates?__debugger__=yes&cmd=resource&f=console.png&s=ZnFZJHybqlItp3E4JU0U HTTP/1.1" 200 -
+2024-09-26 01:50:53,094 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:50:53] "GET /attendance/purge_duplicates?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-09-26 01:52:37,365 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 01:52:37,477 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 01:52:39,179 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8003
+ * Running on http://192.168.103.51:8003
+2024-09-26 01:52:39,179 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-09-26 01:52:39,180 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 01:52:39,793 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 01:52:39,795 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 01:52:44,459 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:52:44] "GET /attendance/purge_duplicates HTTP/1.1" 200 -
+2024-09-26 01:52:45,562 INFO app Thread-3 (process_request_thread) : Backup of log file created at D:\attendance\log.csv.backup.
+2024-09-26 01:52:45,572 INFO app Thread-3 (process_request_thread) : Purged 60 duplicate actions from the log file.
+2024-09-26 01:52:45,573 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:52:45] "[32mPOST /attendance/purge_duplicates HTTP/1.1[0m" 302 -
+2024-09-26 01:52:45,585 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:52:45] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 01:52:50,452 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:52:50] "GET /attendance/purge_duplicates HTTP/1.1" 200 -
+2024-09-26 01:52:51,440 INFO app Thread-6 (process_request_thread) : Backup of log file created at D:\attendance\log.csv.backup.
+2024-09-26 01:52:51,442 INFO app Thread-6 (process_request_thread) : No duplicate actions found in the log file.
+2024-09-26 01:52:51,442 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:52:51] "[32mPOST /attendance/purge_duplicates HTTP/1.1[0m" 302 -
+2024-09-26 01:52:51,449 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:52:51] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 01:53:08,611 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:53:08] "GET /attendance/purge_duplicates HTTP/1.1" 200 -
+2024-09-26 01:53:09,842 INFO app Thread-9 (process_request_thread) : Backup of log file created at D:\attendance\log.csv.backup.
+2024-09-26 01:53:09,844 INFO app Thread-9 (process_request_thread) : No duplicate actions found in the log file.
+2024-09-26 01:53:09,844 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:53:09] "[32mPOST /attendance/purge_duplicates HTTP/1.1[0m" 302 -
+2024-09-26 01:53:09,850 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:53:09] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 01:53:12,397 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:53:12] "GET /attendance/export HTTP/1.1" 200 -
+2024-09-26 01:54:22,469 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:54:22] "[32mGET /attendance/logout HTTP/1.1[0m" 302 -
+2024-09-26 01:54:22,476 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:54:22] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 01:54:23,606 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 01:54:23] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 02:27:45,393 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 02:27:45,497 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 02:27:46,191 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 02:27:46,194 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 02:28:10,681 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 02:28:10,823 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 02:28:11,454 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 02:28:11,457 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 02:30:22,734 ERROR app Thread-2 (process_request_thread) : Error reading employee list: 'Name'
+2024-09-26 02:30:22,738 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:30:22] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 02:33:21,861 ERROR app Thread-4 (process_request_thread) : Error reading employee list: 'Name'
+2024-09-26 02:33:21,864 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:33:21] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 02:34:24,634 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 02:34:24,731 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 02:34:25,409 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 02:34:25,412 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 02:34:50,675 ERROR app Thread-2 (process_request_thread) : Error reading employee list: 'Name'
+2024-09-26 02:34:50,682 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:34:50] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 02:35:42,515 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:35:42] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 02:39:40,104 ERROR app Thread-6 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-25T23:39:39.839148+05:0'
+2024-09-26 02:39:40,108 ERROR app Thread-6 (process_request_thread) : Error reading log file for duplicate check: 'Employee ID'
+2024-09-26 02:39:40,109 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:39:40] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 02:39:40,115 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:39:40] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 02:40:30,255 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 02:40:30,402 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 02:40:31,110 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 02:40:31,113 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 02:40:33,815 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8003
+ * Running on http://192.168.103.51:8003
+2024-09-26 02:40:33,815 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-09-26 02:40:33,816 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 02:40:34,510 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 02:40:34,513 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 02:42:45,139 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:42:45] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 02:42:49,325 ERROR app Thread-3 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-25T23:42:49.058000+05:0'
+2024-09-26 02:42:49,327 ERROR app Thread-3 (process_request_thread) : Error reading log file for duplicate check: 'Employee ID'
+2024-09-26 02:42:49,328 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:42:49] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 02:42:49,331 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:42:49] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 02:43:16,320 ERROR app Thread-5 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-25T23:43:16.052424+05:0'
+2024-09-26 02:43:16,322 ERROR app Thread-5 (process_request_thread) : Error reading log file for duplicate check: 'Employee ID'
+2024-09-26 02:43:16,322 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:43:16] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 02:43:16,326 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:43:16] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 02:49:39,840 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8003
+ * Running on http://192.168.103.51:8003
+2024-09-26 02:49:39,840 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-09-26 02:49:39,841 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 02:49:40,496 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 02:49:40,498 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 02:50:54,559 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:50:54] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 02:50:59,817 ERROR app Thread-3 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-25T23:50:59.544746+05:0'
+2024-09-26 02:50:59,818 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:50:59] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 02:50:59,821 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:50:59] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 02:51:05,720 ERROR app Thread-5 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-25T23:51:05.447768+05:0'
+2024-09-26 02:51:05,723 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:51:05] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 02:51:05,726 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:51:05] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 02:51:10,962 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:51:10] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 02:51:15,903 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:51:15] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-26 02:51:15,919 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 02:51:15] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 03:55:10,075 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8003
+ * Running on http://192.168.103.51:8003
+2024-09-26 03:55:10,075 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-09-26 03:55:10,076 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 03:55:10,644 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 03:55:10,646 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 03:55:14,136 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 03:55:14] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 03:55:19,673 ERROR app Thread-3 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T00:55:19.469896+05:0'
+2024-09-26 03:55:19,678 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 03:55:19] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 03:55:19,681 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 03:55:19] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 03:55:25,406 ERROR app Thread-5 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T00:55:25.214699+05:0'
+2024-09-26 03:55:25,408 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 03:55:25] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 03:55:25,411 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 03:55:25] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 03:55:29,053 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 03:55:29] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 03:55:32,521 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 03:55:32] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-26 03:55:32,530 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 03:55:32] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:01:06,939 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:01:06] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:01:22,944 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:01:22] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:01:38,981 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:01:38] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:01:40,282 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:01:40] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:03:12,972 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:03:12] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:03:13,808 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:03:13] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:03:26,825 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:03:26] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:04:41,193 INFO werkzeug Thread-20 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:04:41] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:04:44,372 INFO werkzeug Thread-21 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:04:44] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:04:45,139 INFO werkzeug Thread-22 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:04:45] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:05:02,367 INFO werkzeug Thread-23 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:05:02] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:07:41,803 INFO werkzeug Thread-25 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:07:41] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:08:19,482 INFO werkzeug Thread-26 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:08:19] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:08:31,894 INFO werkzeug Thread-27 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:08:31] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:08:32,538 INFO werkzeug Thread-28 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:08:32] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:08:39,015 INFO werkzeug Thread-29 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:08:39] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:09:02,206 INFO werkzeug Thread-30 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:09:02] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:09:07,481 INFO werkzeug Thread-31 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:09:07] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:09:12,834 INFO werkzeug Thread-32 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:09:12] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:09:16,295 INFO werkzeug Thread-33 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:09:16] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:09:45,942 INFO werkzeug Thread-34 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:09:45] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:10:17,184 INFO werkzeug Thread-35 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:10:17] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 04:10:32,379 ERROR app Thread-36 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T01:10:32.217794+05:0'
+2024-09-26 04:10:32,381 INFO werkzeug Thread-36 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:10:32] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 04:10:32,385 INFO werkzeug Thread-37 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:10:32] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 04:27:25,573 INFO werkzeug Thread-38 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:27:25] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 04:27:48,320 ERROR app Thread-39 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T01:27:48.178704+05:0'
+2024-09-26 04:27:48,324 ERROR app Thread-39 (process_request_thread) : Error writing to log file: [Errno 13] Permission denied: 'D:\\attendance\\log.csv'
+2024-09-26 04:27:48,324 INFO werkzeug Thread-39 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:27:48] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 04:27:48,328 INFO werkzeug Thread-40 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:27:48] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 04:28:10,328 ERROR app Thread-41 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T01:28:10.187467+05:0'
+2024-09-26 04:28:10,332 INFO werkzeug Thread-41 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:28:10] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 04:28:10,336 INFO werkzeug Thread-42 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:28:10] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 04:28:14,506 INFO werkzeug Thread-43 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:28:14] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 04:28:19,543 INFO werkzeug Thread-44 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:28:19] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-26 04:28:19,549 INFO werkzeug Thread-45 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:28:19] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:36:15,923 INFO werkzeug Thread-47 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:36:15] "[35m[1mGET /attendance/report HTTP/1.1[0m" 500 -
+2024-09-26 04:36:15,931 INFO werkzeug Thread-48 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:36:15] "GET /attendance/report?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-09-26 04:36:15,932 INFO werkzeug Thread-49 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:36:15] "GET /attendance/report?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-09-26 04:36:15,937 INFO werkzeug Thread-50 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:36:15] "GET /attendance/report?__debugger__=yes&cmd=resource&f=console.png&s=UpWts2h1G1HTTRY1mVtV HTTP/1.1" 200 -
+2024-09-26 04:36:15,945 INFO werkzeug Thread-51 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:36:15] "GET /attendance/report?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-09-26 04:36:21,215 INFO werkzeug Thread-52 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:36:21] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-26 04:36:21,229 INFO werkzeug Thread-53 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:36:21] "[35m[1mGET /attendance/report HTTP/1.1[0m" 500 -
+2024-09-26 04:36:21,259 INFO werkzeug Thread-54 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:36:21] "[36mGET /attendance/report?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-09-26 04:36:21,260 INFO werkzeug Thread-55 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:36:21] "[36mGET /attendance/report?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-09-26 04:36:21,269 INFO werkzeug Thread-56 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:36:21] "[36mGET /attendance/report?__debugger__=yes&cmd=resource&f=console.png&s=UpWts2h1G1HTTRY1mVtV HTTP/1.1[0m" 304 -
+2024-09-26 04:36:54,763 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 04:36:54,881 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 04:36:55,515 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 04:36:55,518 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 04:36:58,224 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:36:58] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:37:01,381 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:37:01] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:37:31,929 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:37:31] "GET /attendance/add_employee HTTP/1.1" 200 -
+2024-09-26 04:37:33,255 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:37:33] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:37:50,126 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:37:50] "GET /attendance/add_employee HTTP/1.1" 200 -
+2024-09-26 04:38:02,836 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:38:02] "[32mPOST /attendance/add_employee HTTP/1.1[0m" 302 -
+2024-09-26 04:38:02,841 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:38:02] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:38:09,504 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:38:09] "GET /attendance/edit_employee/0124 HTTP/1.1" 200 -
+2024-09-26 04:38:14,277 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:38:14] "[32mPOST /attendance/edit_employee/0124 HTTP/1.1[0m" 302 -
+2024-09-26 04:38:14,285 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:38:14] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:38:19,304 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:38:19] "GET /attendance/delete_employee/0124 HTTP/1.1" 200 -
+2024-09-26 04:38:21,029 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:38:21] "[32mPOST /attendance/delete_employee/0124 HTTP/1.1[0m" 302 -
+2024-09-26 04:38:21,033 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:38:21] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:40:01,969 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:40:01] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:40:21,269 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:40:21] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:40:30,214 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:40:30] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:40:32,941 INFO werkzeug Thread-19 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:40:32] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:40:36,335 INFO werkzeug Thread-20 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:40:36] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:42:39,197 INFO werkzeug Thread-22 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:42:39] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:42:56,812 INFO werkzeug Thread-23 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:42:56] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:43:01,632 INFO werkzeug Thread-24 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:43:01] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:43:04,732 INFO werkzeug Thread-25 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:43:04] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:43:06,441 INFO werkzeug Thread-26 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:43:06] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:43:44,747 INFO werkzeug Thread-27 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:43:44] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:45:32,612 INFO werkzeug Thread-29 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:45:32] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:46:09,527 INFO werkzeug Thread-30 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:46:09] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:46:13,308 INFO werkzeug Thread-31 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:46:13] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:46:41,728 INFO werkzeug Thread-32 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:46:41] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:47:16,495 INFO werkzeug Thread-33 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:47:16] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:47:17,233 INFO werkzeug Thread-34 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:47:17] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:47:18,066 INFO werkzeug Thread-35 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:47:18] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:47:21,158 INFO werkzeug Thread-36 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:47:21] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:47:22,010 INFO werkzeug Thread-37 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:47:22] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:47:39,656 INFO werkzeug Thread-38 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:47:39] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 04:47:57,197 INFO werkzeug Thread-39 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:47:57] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:59:26,927 INFO werkzeug Thread-41 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:59:26] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:59:27,750 INFO werkzeug Thread-42 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:59:27] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:59:35,064 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8003
+ * Running on http://192.168.103.51:8003
+2024-09-26 04:59:35,064 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-09-26 04:59:35,065 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 04:59:35,670 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 04:59:35,672 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 04:59:36,936 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:59:36] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:59:37,636 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:59:37] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 04:59:47,242 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 04:59:47] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:00:15,525 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:00:15] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:00:27,402 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:00:27] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:01:05,345 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 05:01:05,440 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 05:01:06,086 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 05:01:06,088 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 05:01:06,117 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:01:06] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:01:06,360 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:01:06] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:02:35,730 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:02:35] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:02:36,687 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:02:36] "GET /attendance/edit_employee/0002 HTTP/1.1" 200 -
+2024-09-26 05:03:22,038 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 05:03:22,147 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 05:03:22,754 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 05:03:22,757 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 05:03:25,855 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 05:03:25,964 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 05:03:26,586 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 05:03:26,589 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 05:03:27,931 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:03:27] "GET /attendance/edit_employee/0002 HTTP/1.1" 200 -
+2024-09-26 05:03:29,276 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:03:29] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:03:31,958 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:03:31] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:03:49,577 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:03:49] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:03:51,495 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:03:51] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 05:04:03,943 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:04:03] "GET /attendance/purge_duplicates HTTP/1.1" 200 -
+2024-09-26 05:04:05,085 INFO app Thread-8 (process_request_thread) : Backup of log file created at D:\attendance\log.csv.backup.
+2024-09-26 05:04:05,087 INFO app Thread-8 (process_request_thread) : No duplicate actions found in the log file.
+2024-09-26 05:04:05,087 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:04:05] "[32mPOST /attendance/purge_duplicates HTTP/1.1[0m" 302 -
+2024-09-26 05:04:05,092 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:04:05] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 05:04:29,374 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:04:29] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 05:04:44,819 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:04:44] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 05:04:50,894 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:04:50] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 05:04:54,990 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:04:54] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-26 05:04:54,996 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:04:54] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 05:04:56,779 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:04:56] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:04:57,914 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:04:57] "GET /attendance/add_employee HTTP/1.1" 200 -
+2024-09-26 05:05:07,030 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:05:07] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:06:41,489 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 05:06:41,673 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 05:06:42,348 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 05:06:42,350 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 05:07:06,854 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 05:07:06,957 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 05:07:07,546 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 05:07:07,548 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 05:07:17,960 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:07:17] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:07:19,040 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:07:19] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:07:19,973 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:07:19] "GET /attendance/add_employee HTTP/1.1" 200 -
+2024-09-26 05:07:24,401 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:07:24] "[32mPOST /attendance/add_employee HTTP/1.1[0m" 302 -
+2024-09-26 05:07:24,406 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:07:24] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:08:36,186 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 05:08:36,276 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 05:08:36,934 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 05:08:36,936 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 05:08:54,273 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 05:08:54,357 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 05:08:55,064 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 05:08:55,066 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 05:09:13,793 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:09:13] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:09:21,852 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:09:21] "GET /attendance/add_employee HTTP/1.1" 200 -
+2024-09-26 05:09:25,086 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:09:25] "[32mPOST /attendance/add_employee HTTP/1.1[0m" 302 -
+2024-09-26 05:09:25,091 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:09:25] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:09:33,090 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:09:33] "GET /attendance/delete_employee/0125 HTTP/1.1" 200 -
+2024-09-26 05:09:34,053 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:09:34] "[32mPOST /attendance/delete_employee/0125 HTTP/1.1[0m" 302 -
+2024-09-26 05:09:34,058 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:09:34] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:09:36,896 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:09:36] "[32mGET /attendance/logout HTTP/1.1[0m" 302 -
+2024-09-26 05:09:36,903 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:09:36] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 05:09:37,962 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:09:37] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 05:09:43,896 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:09:43] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 05:09:47,205 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:09:47] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-26 05:09:47,216 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:09:47] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 05:09:51,017 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:09:51] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:09:57,040 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:09:57] "GET /attendance/delete_employee/0124 HTTP/1.1" 200 -
+2024-09-26 05:09:58,158 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:09:58] "[32mPOST /attendance/delete_employee/0124 HTTP/1.1[0m" 302 -
+2024-09-26 05:09:58,164 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:09:58] "GET /attendance/manage_employees HTTP/1.1" 200 -
+2024-09-26 05:10:18,328 INFO werkzeug Thread-19 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:10:18] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 05:10:30,982 INFO werkzeug Thread-20 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:10:30] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 05:11:11,878 INFO werkzeug Thread-21 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:11:11] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 05:11:15,590 INFO werkzeug Thread-22 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:11:15] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-26 05:11:15,599 INFO werkzeug Thread-23 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:11:15] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 05:33:14,671 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 05:33:14,808 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 05:33:15,409 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 05:33:15,411 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 05:33:43,822 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8003
+ * Running on http://192.168.103.51:8003
+2024-09-26 05:33:43,822 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2024-09-26 05:33:43,823 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 05:33:44,424 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 05:33:44,427 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 05:33:49,829 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:33:49] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 05:34:00,326 ERROR app Thread-3 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T02:34:00.197376+05:0'
+2024-09-26 05:34:00,329 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:34:00] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 05:34:00,332 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:34:00] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 05:34:07,755 ERROR app Thread-5 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T02:34:07.628754+05:0'
+2024-09-26 05:34:07,758 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:34:07] "POST /attendance/submit HTTP/1.1" 200 -
+2024-09-26 05:34:20,093 ERROR app Thread-6 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T02:34:19.966650+05:0'
+2024-09-26 05:34:20,094 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:34:20] "[32mPOST /attendance/back_to_work HTTP/1.1[0m" 302 -
+2024-09-26 05:34:20,097 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:34:20] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 05:34:24,875 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:34:24] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 05:34:28,520 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:34:28] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-26 05:34:28,524 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:34:28] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 05:34:34,225 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:34:34] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-26 05:34:34,238 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:34:34] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 05:46:26,638 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 05:46:26,786 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 05:46:27,420 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 05:46:27,422 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 05:46:30,498 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:46:30] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-26 05:46:30,513 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:46:30] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 05:46:51,820 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:46:51] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 05:46:59,998 ERROR app Thread-5 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T02:46:59.868973+05:0'
+2024-09-26 05:47:00,000 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:47:00] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 05:47:00,004 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:47:00] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 05:47:02,106 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:47:02] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 05:47:06,064 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:47:06] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-26 05:47:06,071 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:47:06] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 05:47:17,227 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:47:17] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 05:47:29,769 ERROR app Thread-11 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T02:47:29.302795+05:0'
+2024-09-26 05:47:29,772 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:47:29] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 05:47:29,776 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:47:29] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 05:47:40,353 ERROR app Thread-13 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T02:47:40.223352+05:0'
+2024-09-26 05:47:40,357 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:47:40] "POST /attendance/submit HTTP/1.1" 200 -
+2024-09-26 05:47:42,120 ERROR app Thread-14 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T02:47:41.990630+05:0'
+2024-09-26 05:47:42,122 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:47:42] "[32mPOST /attendance/back_to_work HTTP/1.1[0m" 302 -
+2024-09-26 05:47:42,126 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:47:42] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 05:47:48,873 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:47:48] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 05:50:47,079 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 05:50:47] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:03:34,939 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 06:03:35,035 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 06:03:35,672 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 06:03:35,674 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 06:03:37,533 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:03:37] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:03:50,564 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:03:50] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:04:00,763 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:04:00] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:04:07,919 ERROR app Thread-5 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:04:07.781620+05:0'
+2024-09-26 06:04:07,920 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:04:07] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:04:07,924 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:04:07] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:04:10,654 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:04:10] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:04:21,851 ERROR app Thread-8 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:04:21.715137+05:0'
+2024-09-26 06:04:21,852 ERROR app Thread-8 (process_request_thread) : Error processing Time-Out: Can only use .str accessor with string values!
+2024-09-26 06:04:21,853 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:04:21] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:04:21,857 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:04:21] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:04:25,214 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:04:25] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:04:26,227 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:04:26] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:04:40,193 ERROR app Thread-12 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:04:40.055747+05:0'
+2024-09-26 06:04:40,195 ERROR app Thread-12 (process_request_thread) : Error processing Time-Out: Can only use .str accessor with string values!
+2024-09-26 06:04:40,196 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:04:40] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:04:40,199 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:04:40] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:05:58,247 ERROR app Thread-14 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:05:58.112092+05:0'
+2024-09-26 06:05:58,249 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:05:58] "POST /attendance/submit HTTP/1.1" 200 -
+2024-09-26 06:06:00,172 ERROR app Thread-15 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:06:00.036699+05:0'
+2024-09-26 06:06:00,173 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:06:00] "[32mPOST /attendance/back_to_work HTTP/1.1[0m" 302 -
+2024-09-26 06:06:00,177 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:06:00] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:06:03,363 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:06:03] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:07:03,872 ERROR app Thread-19 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:07:03.599772+05:0'
+2024-09-26 06:07:03,875 INFO werkzeug Thread-19 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:07:03] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:07:03,879 INFO werkzeug Thread-20 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:07:03] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:07:48,142 ERROR app Thread-21 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:07:48.005774+05:0'
+2024-09-26 06:07:48,151 INFO werkzeug Thread-21 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:07:48] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:07:48,155 INFO werkzeug Thread-22 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:07:48] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:07:52,164 INFO werkzeug Thread-23 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:07:52] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:08:06,827 INFO werkzeug Thread-24 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:08:06] "GET /attendance/purge_duplicates HTTP/1.1" 200 -
+2024-09-26 06:08:08,139 INFO app Thread-25 (process_request_thread) : Backup of log file created at D:\attendance\log.csv.backup.
+2024-09-26 06:08:08,141 INFO app Thread-25 (process_request_thread) : No duplicate actions found in the log file.
+2024-09-26 06:08:08,142 INFO werkzeug Thread-25 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:08:08] "[32mPOST /attendance/purge_duplicates HTTP/1.1[0m" 302 -
+2024-09-26 06:08:08,148 INFO werkzeug Thread-26 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:08:08] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:08:31,653 ERROR app Thread-27 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:08:31.517210+05:0'
+2024-09-26 06:08:31,654 INFO werkzeug Thread-27 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:08:31] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:08:31,658 INFO werkzeug Thread-28 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:08:31] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:08:37,436 INFO werkzeug Thread-29 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:08:37] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:08:45,807 ERROR app Thread-30 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:08:45.671390+05:0'
+2024-09-26 06:08:45,813 INFO werkzeug Thread-30 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:08:45] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:08:45,817 INFO werkzeug Thread-31 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:08:45] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:08:48,458 INFO werkzeug Thread-32 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:08:48] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:11:33,335 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 06:11:33,429 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 06:11:34,119 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 06:11:34,121 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 06:11:35,653 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:11:35] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:11:36,563 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:11:36] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:11:45,725 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:11:45] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:11:47,673 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:11:47] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:11:53,167 ERROR app Thread-6 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:11:53.028314+05:0'
+2024-09-26 06:11:53,168 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:11:53] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:11:53,172 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:11:53] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:12:01,098 ERROR app Thread-8 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:12:00.960432+05:0'
+2024-09-26 06:12:01,101 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:12:01] "POST /attendance/submit HTTP/1.1" 200 -
+2024-09-26 06:12:02,296 ERROR app Thread-9 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:12:02.158352+05:0'
+2024-09-26 06:12:02,297 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:12:02] "[32mPOST /attendance/back_to_work HTTP/1.1[0m" 302 -
+2024-09-26 06:12:02,301 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:12:02] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:12:07,671 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:12:07] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:12:29,852 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:12:29] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:12:34,519 ERROR app Thread-13 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:12:34.382728+05:0'
+2024-09-26 06:12:34,520 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:12:34] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:12:34,523 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:12:34] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:13:02,643 ERROR app Thread-15 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:13:02.504619+05:0'
+2024-09-26 06:13:02,644 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:13:02] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:13:02,649 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:13:02] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:13:07,694 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:13:07] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:13:09,925 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:13:09] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:13:25,359 ERROR app Thread-19 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:13:24.998131+05:0'
+2024-09-26 06:13:25,367 INFO werkzeug Thread-19 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:13:25] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:13:25,370 INFO werkzeug Thread-20 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:13:25] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:13:27,013 INFO werkzeug Thread-21 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:13:27] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:14:59,207 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 06:14:59,302 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 06:15:00,012 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 06:15:00,015 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 06:15:00,892 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:15:00] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:15:14,827 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:15:14] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:15:21,756 ERROR app Thread-4 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:15:21.617224+05:0'
+2024-09-26 06:15:21,757 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:15:21] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:15:21,763 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:15:21] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:15:23,429 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:15:23] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:15:30,381 ERROR app Thread-7 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:15:30.238859+05:0'
+2024-09-26 06:15:30,388 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:15:30] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:15:30,391 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:15:30] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:15:32,132 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:15:32] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:15:47,314 ERROR app Thread-10 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:15:47.174225+05:0'
+2024-09-26 06:15:47,316 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:15:47] "POST /attendance/submit HTTP/1.1" 200 -
+2024-09-26 06:15:49,123 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:15:49] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:15:49,851 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:15:49] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:15:50,499 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:15:50] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:16:06,136 ERROR app Thread-14 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:16:05.997002+05:0'
+2024-09-26 06:16:06,137 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:16:06] "[32mPOST /attendance/back_to_work HTTP/1.1[0m" 302 -
+2024-09-26 06:16:06,140 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:16:06] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:16:10,035 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:16:10] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:16:47,983 ERROR app Thread-17 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:16:47.770700+05:0'
+2024-09-26 06:16:47,984 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:16:47] "POST /attendance/submit HTTP/1.1" 200 -
+2024-09-26 06:16:49,071 ERROR app Thread-18 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:16:48.933704+05:0'
+2024-09-26 06:16:49,073 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:16:49] "[32mPOST /attendance/back_to_work HTTP/1.1[0m" 302 -
+2024-09-26 06:16:49,076 INFO werkzeug Thread-19 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:16:49] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:16:52,883 INFO werkzeug Thread-20 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:16:52] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:16:57,510 ERROR app Thread-21 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:16:57.370943+05:0'
+2024-09-26 06:16:57,511 INFO werkzeug Thread-21 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:16:57] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:16:57,514 INFO werkzeug Thread-22 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:16:57] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:17:01,115 INFO werkzeug Thread-23 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:17:01] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:17:11,985 ERROR app Thread-24 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:17:11.845877+05:0'
+2024-09-26 06:17:11,987 INFO werkzeug Thread-24 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:17:11] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:17:11,990 INFO werkzeug Thread-25 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:17:11] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:17:14,309 INFO werkzeug Thread-26 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:17:14] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:25:07,753 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 06:25:07,872 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 06:25:08,504 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 06:25:08,506 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 06:25:19,781 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 06:25:19,876 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 06:25:20,499 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 06:25:20,501 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 06:27:07,584 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 06:27:07,713 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 06:27:08,328 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 06:27:08,330 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 06:27:15,076 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:27:15] "GET /attendance/login HTTP/1.1" 200 -
+2024-09-26 06:27:19,461 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:27:19] "[32mPOST /attendance/login HTTP/1.1[0m" 302 -
+2024-09-26 06:27:19,472 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:27:19] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:27:22,560 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:27:22] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:27:28,842 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:27:28] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:27:37,648 ERROR app Thread-7 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:27:37.504351+05:0'
+2024-09-26 06:27:37,649 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:27:37] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:27:37,653 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:27:37] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:27:46,298 ERROR app Thread-9 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:27:46.155503+05:0'
+2024-09-26 06:27:46,299 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:27:46] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:27:46,303 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:27:46] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:27:55,258 ERROR app Thread-11 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:27:55.113853+05:0'
+2024-09-26 06:27:55,258 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:27:55] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:27:55,263 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:27:55] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:28:04,491 ERROR app Thread-13 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:28:04.347807+05:0'
+2024-09-26 06:28:04,492 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:28:04] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:28:04,495 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:28:04] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:28:07,462 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:28:07] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:28:18,833 ERROR app Thread-16 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:28:18.685086+05:0'
+2024-09-26 06:28:18,839 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:28:18] "POST /attendance/submit HTTP/1.1" 200 -
+2024-09-26 06:28:21,069 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:28:21] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:28:24,489 ERROR app Thread-18 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:28:24.345594+05:0'
+2024-09-26 06:28:24,490 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:28:24] "[32mPOST /attendance/back_to_work HTTP/1.1[0m" 302 -
+2024-09-26 06:28:24,494 INFO werkzeug Thread-19 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:28:24] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:28:25,965 INFO werkzeug Thread-20 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:28:25] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:36:47,412 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 06:36:47,508 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 06:36:48,154 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 06:36:48,156 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 06:36:49,096 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:36:49] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:36:50,875 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:36:50] "GET /attendance/export HTTP/1.1" 200 -
+2024-09-26 06:37:11,894 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:37:11] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:37:17,120 ERROR app Thread-5 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:37:16.972442+05:0'
+2024-09-26 06:37:17,121 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:37:17] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:37:17,127 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:37:17] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:37:19,424 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:37:19] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:37:32,931 ERROR app Thread-8 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:37:32.782483+05:0'
+2024-09-26 06:37:32,934 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:37:32] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:37:32,938 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:37:32] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:37:47,753 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:37:47] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:37:48,711 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:37:48] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:37:50,690 ERROR app Thread-12 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:37:50.542602+05:0'
+2024-09-26 06:37:50,699 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:37:50] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:37:50,704 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:37:50] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:37:52,326 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:37:52] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:38:08,972 ERROR app Thread-15 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:38:08.825386+05:0'
+2024-09-26 06:38:08,976 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:38:08] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:38:08,980 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:38:08] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:38:17,144 ERROR app Thread-17 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:38:16.975891+05:0'
+2024-09-26 06:38:17,146 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:38:17] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:38:17,151 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:38:17] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:38:23,655 ERROR app Thread-19 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:38:23.508263+05:0'
+2024-09-26 06:38:23,660 INFO werkzeug Thread-19 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:38:23] "POST /attendance/submit HTTP/1.1" 200 -
+2024-09-26 06:43:21,673 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 06:43:21,795 INFO werkzeug MainThread :  * Restarting with stat
+2024-09-26 06:43:22,463 WARNING werkzeug MainThread :  * Debugger is active!
+2024-09-26 06:43:22,467 INFO werkzeug MainThread :  * Debugger PIN: 172-221-825
+2024-09-26 06:43:30,064 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:43:30] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:43:33,349 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:43:33] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:43:35,635 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:43:35] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:43:42,325 ERROR app Thread-5 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:43:42.174260+05:0'
+2024-09-26 06:43:42,326 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:43:42] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:43:42,330 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:43:42] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:43:49,093 ERROR app Thread-7 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:43:48.943683+05:0'
+2024-09-26 06:43:49,093 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:43:49] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:43:49,097 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:43:49] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:43:56,099 ERROR app Thread-9 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:43:55.948807+05:0'
+2024-09-26 06:43:56,100 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:43:56] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:43:56,104 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:43:56] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:44:03,585 ERROR app Thread-11 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:44:03.434787+05:0'
+2024-09-26 06:44:03,758 ERROR app Thread-11 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:44:03.608183+05:0'
+2024-09-26 06:44:03,760 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:44:03] "POST /attendance/submit HTTP/1.1" 200 -
+2024-09-26 06:44:05,435 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:44:05] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:44:10,884 ERROR app Thread-13 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:44:10.734826+05:0'
+2024-09-26 06:44:10,890 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:44:10] "[32mPOST /attendance/back_to_work HTTP/1.1[0m" 302 -
+2024-09-26 06:44:10,893 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:44:10] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:44:12,954 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:44:12] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:44:23,353 ERROR app Thread-16 (process_request_thread) : Exception occurred while fetching time: Invalid isoformat string: '2024-09-26T03:44:23.193302+05:0'
+2024-09-26 06:44:23,360 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:44:23] "[32mPOST /attendance/submit HTTP/1.1[0m" 302 -
+2024-09-26 06:44:23,363 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:44:23] "GET /attendance HTTP/1.1" 200 -
+2024-09-26 06:44:25,827 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [26/Sep/2024 06:44:25] "GET /attendance/report HTTP/1.1" 200 -
+2024-09-26 06:47:50,639 INFO werkzeug MainThread :  * Detected change in 'D:\\attendance\\app.py', reloading
+2024-09-26 06:47:50,748 INFO werkzeug MainThread :  * Restarting with stat

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Access Report - Time Log</title>
+    <!-- Include Tailwind CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex items-center justify-center px-4">
+        <div class="w-full max-w-md">
+            <h1 class="text-3xl font-bold text-center text-blue-600">Login</h1>
+            <div class="mt-8 bg-white py-8 px-6 shadow rounded-lg">
+                <!-- Display flash messages -->
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    <div class="mb-4">
+                      {% for message in messages %}
+                        <div class="text-red-600 text-center">{{ message }}</div>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                {% endwith %}
+                
+                <!-- Login Form -->
+                <form method="post" action="{{ url_for('login') }}" class="space-y-6">
+                    <div>
+                        <input type="password" name="master_key" placeholder="Enter Key" required
+                               class="appearance-none block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-lg">
+                    </div>
+                    <div>
+                        <button type="submit"
+                                class="w-full py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Access Report
+                        </button>
+                    </div>
+                </form>
+                
+                <!-- Back to Home -->
+                <div class="mt-4 text-center">
+                    <a href="{{ url_for('index') }}" class="text-blue-600 hover:underline">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

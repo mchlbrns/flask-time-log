@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Sub-Key</title>
+    <!-- Include Tailwind CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex items-center justify-center px-4">
+        <div class="w-full max-w-md bg-white py-8 px-6 shadow-lg rounded-lg">
+            <!-- Page Title -->
+            <h2 class="text-3xl font-bold text-center text-blue-600">Change Sub-Key</h2>
+
+            <!-- Form -->
+            <form action="{{ url_for('change_sub_key') }}" method="POST" class="mt-8 space-y-6">
+                
+                <!-- Select Sub-Key to Change -->
+                <div>
+                    <label for="old_sub_key" class="block text-lg font-medium text-gray-700">
+                        Select Sub-Key to Change:
+                    </label>
+                    <select name="old_sub_key" id="old_sub_key" required
+                            class="mt-2 w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-lg">
+                        {% for sub_key in sub_keys %}
+                        <option value="{{ sub_key }}">{{ sub_key }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                <!-- New Sub-Key Input -->
+                <div>
+                    <label for="new_sub_key" class="block text-lg font-medium text-gray-700">
+                        New Sub-Key:
+                    </label>
+                    <input type="text" name="new_sub_key" id="new_sub_key" required
+                           class="mt-2 w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-lg placeholder-gray-400">
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit"
+                            class="w-full py-3 px-4 bg-yellow-500 text-white font-medium text-lg rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 shadow-sm">
+                        Change Sub-Key
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

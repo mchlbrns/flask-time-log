@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance Report - Time Log</title>
+    <!-- Include Tailwind CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Include DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+    <!-- Custom styles -->
+    <style>
+        /* Sticky header and responsive table */
+        .dataTables_wrapper .dataTables_scroll {
+            overflow: visible;
+        }
+        .dataTables_scrollHead {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background-color: #EBF5FF; /* Light blue background for header */
+        }
+        table.dataTable thead th {
+            padding: 0.75rem;
+            text-align: left;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #3B82F6;
+            border-bottom: 2px solid #3B82F6;
+        }
+        table.dataTable tbody td {
+            padding: 1rem;
+            font-size: 0.875rem;
+            color: #374151;
+        }
+        .dataTables_wrapper .dataTables_paginate .paginate_button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            margin: 0.25rem;
+            border: 1px solid #D1D5DB;
+            background-color: #FFFFFF;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #6B7280;
+            cursor: pointer;
+            border-radius: 0.375rem;
+            transition: all 0.2s;
+        }
+        .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+            background-color: #3B82F6;
+            color: white;
+        }
+        .dataTables_wrapper .dataTables_filter input {
+            margin-left: 0.5rem;
+            padding: 0.5rem;
+            border: 1px solid #D1D5DB;
+            border-radius: 0.375rem;
+        }
+        /* Responsive table */
+        @media (min-width: 1024px) {
+            .table-container {
+                max-width: 90%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex flex-col items-center px-4">
+        <div class="w-full max-w-7xl mt-10">
+            <!-- Navigation Links -->
+            <div class="mt-6 text-center">
+                <a href="{{ url_for('logout') }}" class="text-blue-600 hover:underline">Logout</a>
+                <span class="mx-2">|</span>
+                <a href="{{ url_for('index') }}" class="text-blue-600 hover:underline">Back to Home</a>
+                
+                <!-- Only show "Change Key", "Manage Sub-Keys", and "Purge Duplicates" for admin users -->
+                {% if session.get('role') == 'admin' %}
+                    <span class="mx-2">|</span>
+                    <a href="{{ url_for('change_key') }}" class="text-blue-600 hover:underline">Change Key</a>
+                    <span class="mx-2">|</span>
+                    <a href="{{ url_for('manage_sub_keys') }}" class="text-blue-600 hover:underline">Manage Sub-Keys</a>
+                    <span class="mx-2">|</span>
+                    <a href="{{ url_for('purge_duplicates') }}" class="text-red-600 hover:underline">Purge Duplicates</a>
+                    <!-- Add the "Manage Employees" button here -->
+                    <span class="mx-2">|</span>
+                    <a href="{{ url_for('manage_employees') }}" class="text-blue-600 hover:underline">Manage Employees</a>
+                {% endif %}
+                
+            </div>
+          
+
+            <h1 class="text-3xl font-bold text-center text-blue-600 my-6">Attendance Report</h1>
+
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                <div class="mb-4">
+                  {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} bg-{{ 'red' if category == 'danger' else 'yellow' if category == 'warning' else 'green' if category == 'success' else 'blue' }}-100 border border-{{ 'red' if category == 'danger' else 'yellow' if category == 'warning' else 'green' if category == 'success' else 'blue' }}-400 text-{{ 'red' if category == 'danger' else 'yellow' if category == 'warning' else 'green' if category == 'success' else 'blue' }}-700 px-4 py-3 rounded relative" role="alert">
+                      <span class="block sm:inline">{{ message }}</span>
+                      <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+                        <svg class="fill-current h-6 w-6 text-{{ 'red' if category == 'danger' else 'yellow' if category == 'warning' else 'green' if category == 'success' else 'blue' }}-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                          <title>Close</title>
+                          <path d="M14.348 5.652a1 1 0 00-1.414 0L10 8.586 7.066 5.652a1 1 0 00-1.414 1.414L8.586 10l-2.934 2.934a1 1 0 001.414 1.414L10 11.414l2.934 2.934a1 1 0 001.414-1.414L11.414 10l2.934-2.934a1 1 0 000-1.414z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            {% endwith %}
+
+            <div class="flex justify-end mb-4">
+                <a href="{{ url_for('export') }}" class="px-4 py-2 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition duration-300">
+                    Export to Excel
+                </a>
+            </div>
+
+            <!-- Table -->
+            <div class="table-container overflow-x-auto bg-white shadow-lg rounded-lg">
+                <table id="attendanceTable" class="min-w-full divide-y divide-gray-200">
+                    <thead>
+                        <tr>
+                            {% for header in headers %}
+                            <th>{{ header }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        {% for row in data %}
+                        <tr class="{% if row[headers.index('Status')]|lower in ['overbreak', 'late'] %}bg-red-100{% elif row[headers.index('Status')]|lower == 'on time' %}bg-green-100{% endif %}">
+                            {% for item in row %}
+                            <td>{{ item }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>                    
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Initialize DataTables -->
+    <script>
+        $(document).ready(function() {
+            $('#attendanceTable').DataTable({
+                "order": [], // Disable initial sorting
+                "pageLength": 10,
+                "scrollX": true,
+                "scrollY": "70vh",
+                "scrollCollapse": true,
+                "fixedHeader": true
+            });
+        });
+    </script>
+</body>
+</html>

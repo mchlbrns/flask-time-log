@@ -1,0 +1,36 @@
+<!-- templates/change_key.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Master Key</title>
+    <!-- Include Tailwind CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex items-center justify-center px-4">
+        <div class="w-full max-w-md bg-white py-8 px-6 shadow-lg rounded-lg">
+            <h2 class="text-3xl font-bold text-center text-blue-600">Change Master Key</h2>
+
+            <!-- Form for changing master key -->
+            <form action="{{ url_for('change_key') }}" method="POST" class="mt-8 space-y-6">
+                
+                <!-- Master Key Input -->
+                <div>
+                    <label for="new_master_key" class="block text-lg font-medium text-gray-700">New Master Key:</label>
+                    <input type="text" name="new_master_key" id="new_master_key" required
+                           class="mt-2 w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-lg placeholder-gray-400">
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit"
+                            class="w-full py-3 px-4 bg-green-500 text-white font-medium text-lg rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 shadow-sm">
+                        Update Master Key
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

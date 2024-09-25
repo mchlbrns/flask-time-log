@@ -1,0 +1,3 @@
+"ID","Employee ID","Name","Group","Action","Date","Start Time","End Time","Time Consumed","Shift","Lateness Duration","Status"
+"1","1","Malik Shahzaib","ADMIN","Time_in/Time_out","2024-09-26","03:48:19","03:48:55","36 secs","PM Shift (after midnight)","4 hrs & 48 mins","Late"
+"2","1","Malik Shahzaib","ADMIN","Recite Sutra","2024-09-26","03:48:26","03:48:38","12 secs","","","On Time"

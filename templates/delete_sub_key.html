@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Sub-Key</title>
+    <!-- Include Tailwind CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex items-center justify-center px-4">
+        <div class="w-full max-w-md bg-white py-8 px-6 shadow-lg rounded-lg">
+            <!-- Page Title -->
+            <h2 class="text-3xl font-bold text-center text-blue-600">Delete Sub-Key</h2>
+
+            <!-- Form -->
+            <form action="{{ url_for('delete_sub_key') }}" method="POST" class="mt-8 space-y-6">
+                
+                <!-- Select Sub-Key to Delete -->
+                <div>
+                    <label for="sub_key_to_delete" class="block text-lg font-medium text-gray-700">
+                        Select Sub-Key to Delete:
+                    </label>
+                    <select name="sub_key_to_delete" id="sub_key_to_delete" required
+                            class="mt-2 w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 text-lg">
+                        {% for sub_key in sub_keys %}
+                        <option value="{{ sub_key }}">{{ sub_key }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit"
+                            class="w-full py-3 px-4 bg-red-500 text-white font-medium text-lg rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 shadow-sm">
+                        Delete Sub-Key
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

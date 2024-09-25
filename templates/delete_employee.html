@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Delete Employee - Time Log</title>
+    <!-- Include Tailwind CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10">
+        <h1 class="text-3xl font-bold text-center text-red-600 mb-6">Delete Employee</h1>
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div class="mb-4">
+              {% for category, message in messages %}
+                <div class="bg-{{ 'red' if category == 'danger' else 'yellow' if category == 'warning' else 'green' if category == 'success' else 'blue' }}-100 border border-{{ 'red' if category == 'danger' else 'yellow' if category == 'warning' else 'green' if category == 'success' else 'blue' }}-400 text-{{ 'red' if category == 'danger' else 'yellow' if category == 'warning' else 'green' if category == 'success' else 'blue' }}-700 px-4 py-3 rounded relative" role="alert">
+                  <span class="block sm:inline">{{ message }}</span>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <p class="text-lg">Are you sure you want to delete employee <strong>{{ employee.Name }}</strong> (ID: {{ employee.ID }})?</p>
+            <form method="post" action="{{ url_for('delete_employee', employee_id=employee.ID) }}" class="mt-6">
+                <input type="submit" value="Yes, Delete" class="px-4 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 transition duration-300">
+                <a href="{{ url_for('manage_employees') }}" class="ml-4 text-blue-600 hover:underline">Cancel</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
