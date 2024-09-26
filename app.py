@@ -99,8 +99,9 @@ TIME_LIMITS = {
     "Toilet": 20,
     "Smoke": 20,
     "BREAK1": 45,
-    "BREAK2": 45
+    "BREAK2": 45,
 }
+
 
 def get_employee_list():
     """Reads the employee list from employees.csv and returns a list of dictionaries."""
@@ -175,6 +176,145 @@ def admin_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
+def handle_halfday_time_in(employee_id, name, group, timestamp, date_str, time_str):
+    """
+    Handles the Halfday Time-In action by recording it without enforcing schedule.
+    """
+    # Initialize log ID
+    new_id = get_next_log_id()
+
+    # Log the data
+    data = {
+        'ID': new_id,
+        'Employee ID': int(employee_id),
+        'Name': name,
+        'Group': group.upper(),
+        'Action': 'Halfday_Time_In',
+        'Date': date_str,
+        'Start Time': time_str,
+        'End Time': '',
+        'Time Consumed': '',
+        'Shift': 'Halfday',
+        'Lateness Duration': '',
+        'Status': 'Halfday Time-In'
+    }
+
+    # Append to log.csv
+    append_to_log_file(data)
+
+    flash(f"Halfday Time-In recorded for {name} on {date_str} at {time_str}.", 'info')
+    return redirect(url_for('index'))
+
+def handle_halfday_time_out(employee_id, name, group, timestamp, date_str, time_str):
+    """
+    Handles the Halfday Time-Out action by updating the corresponding Halfday Time-In entry.
+    """
+    if os.path.isfile(LOG_FILE):
+        try:
+            df = pd.read_csv(LOG_FILE, encoding='utf-8')
+            # Fill NaN values
+            df['Action'] = df['Action'].fillna('')
+            df['End Time'] = df['End Time'].fillna('')
+            df['Date'] = df['Date'].fillna('')
+            df['Start Time'] = df['Start Time'].fillna('')
+            # Find the last Halfday Time-In entry for this user and date without End Time
+            mask = (
+                (df['Employee ID'] == int(employee_id)) &
+                (df['Date'].str.strip() == date_str) &
+                (df['Action'].str.lower() == 'halfday_time_in') &
+                (df['End Time'].str.strip() == '')
+            )
+            if not mask.any():
+                flash('Cannot Halfday Time-Out without Halfday Time-In first.', 'warning')
+                return redirect(url_for('index'))
+            else:
+                # Get index of the entry
+                idx = df[mask].index[-1]
+                # Update the entry
+                end_time_str = time_str
+                start_time_str = df.loc[idx, 'Start Time']
+                if not start_time_str:
+                    flash('Start Time is missing for Halfday Time-In. Cannot record Halfday Time-Out.', 'danger')
+                    return redirect(url_for('index'))
+                # Parse times
+                start_time = datetime.strptime(start_time_str, '%H:%M:%S')
+                end_time = datetime.strptime(end_time_str, '%H:%M:%S')
+                # If end_time < start_time, it means the end time is on the next day
+                if end_time < start_time:
+                    end_time += timedelta(days=1)
+                duration_td = end_time - start_time
+                duration_seconds = duration_td.total_seconds()
+
+                # Extract hours, minutes, and seconds
+                duration_hours = int(duration_seconds // 3600)
+                duration_remaining_seconds = int(duration_seconds % 3600)
+                duration_minutes = duration_remaining_seconds // 60
+                duration_secs = duration_remaining_seconds % 60
+
+                # Format Time Consumed
+                duration_str_parts = []
+                if duration_hours > 0:
+                    duration_str_parts.append(f"{duration_hours} hrs")
+                if duration_minutes > 0:
+                    duration_str_parts.append(f"{duration_minutes} mins")
+                if duration_secs > 0:
+                    duration_str_parts.append(f"{duration_secs} secs")
+                duration_str = ' & '.join(duration_str_parts) if duration_str_parts else '0 secs'
+
+                # Update the Action to combine Halfday_Time_In and Halfday_Time_Out
+                df.loc[idx, 'Action'] = 'Halfday_Time_In/Halfday_Time_Out'
+                df.loc[idx, 'End Time'] = end_time_str
+                df.loc[idx, 'Time Consumed'] = duration_str
+                df.loc[idx, 'Status'] = 'Halfday Time-Out'
+
+                # Save the DataFrame back to CSV
+                df.to_csv(LOG_FILE, index=False, quoting=csv.QUOTE_ALL)
+                app.logger.info(f"Halfday Time-Out recorded and combined for {name} on {date_str} at {end_time_str}.")
+                flash(f"Halfday Time-Out recorded and combined for {name} on {date_str} at {end_time_str}.", 'info')
+                return redirect(url_for('index'))
+        except Exception as e:
+            app.logger.error(f"Error processing Halfday Time-Out: {e}")
+            flash('Failed to record Halfday Time-Out. Please try again.', 'danger')
+            return redirect(url_for('index'))
+    else:
+        flash('Cannot Halfday Time-Out without Halfday Time-In first.', 'warning')
+        return redirect(url_for('index'))
+
+def get_next_log_id():
+    """Retrieves the next available log ID."""
+    if os.path.isfile(LOG_FILE):
+        try:
+            with open(LOG_FILE, 'r', newline='', encoding='utf-8') as csvfile:
+                csvreader = csv.reader(csvfile)
+                next(csvreader, None)  # Skip header
+                last_id = 0
+                for row in csvreader:
+                    if row and row[0].isdigit():
+                        last_id = int(row[0])
+                return last_id + 1
+        except Exception as e:
+            app.logger.error(f"Error reading log file for next ID: {e}")
+            return 1
+    else:
+        return 1
+
+def append_to_log_file(data):
+    """Appends a single record to the log.csv file."""
+    file_exists = os.path.isfile(LOG_FILE)
+    try:
+        with open(LOG_FILE, 'a', newline='', encoding='utf-8') as csvfile:
+            fieldnames = ['ID', 'Employee ID', 'Name', 'Group', 'Action', 'Date', 
+                          'Start Time', 'End Time', 'Time Consumed', 'Shift', 
+                          'Lateness Duration', 'Status']
+            csvwriter = csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_ALL)
+            if not file_exists:
+                csvwriter.writeheader()
+            csvwriter.writerow(data)
+    except Exception as e:
+        app.logger.error(f"Error writing to log file: {e}")
+        flash('Failed to record action. Please try again.', 'danger')
+
+
 @app.route('/attendance', methods=['GET'])
 def index():
     employee_list = get_employee_list()
@@ -204,28 +344,37 @@ def submit():
     date_str = timestamp.strftime('%Y-%m-%d')
     time_str = timestamp.strftime('%H:%M:%S')
 
-    if os.path.isfile(LOG_FILE):
-        try:
-            df = pd.read_csv(LOG_FILE, encoding='utf-8')
-            # Fill NaN values
-            df['Action'] = df['Action'].fillna('')
-            df['Date'] = df['Date'].fillna('')
-            df['Employee ID'] = df['Employee ID'].fillna('')
-            # Check if the action already exists for the user on the same date
-            mask = (
-                (df['Employee ID'] == int(employee_id)) &
-                (df['Date'].str.strip() == date_str) &
-                (df['Action'].str.lower() == action.lower())
-            )
-            if mask.any():
-                flash(f"You have already performed '{action}' today.", 'warning')
-                return redirect(url_for('index'))
-        except Exception as e:
-            app.logger.error(f"Error checking for duplicate action: {e}")
-            flash('Failed to check for duplicate actions.', 'danger')
-            return redirect(url_for('index'))
+    # Define actions that can have duplicates
+    ALLOW_DUPLICATES_ACTIONS = [action.strip().lower() for action in ['halfday_time_in', 'halfday_time_out'] + list(TIME_LIMITS.keys())]
 
-    if action.lower() != 'time_in':
+    # Duplicate Action Check
+    if action.lower() not in ALLOW_DUPLICATES_ACTIONS:
+        if os.path.isfile(LOG_FILE):
+            try:
+                df = pd.read_csv(LOG_FILE, encoding='utf-8')
+                # Fill NaN values
+                df['Action'] = df['Action'].fillna('')
+                df['Date'] = df['Date'].fillna('')
+                df['Employee ID'] = df['Employee ID'].fillna('')
+
+                # Check if the action already exists for the user on the same date
+                mask = (
+                    (df['Employee ID'] == int(employee_id)) &
+                    (df['Date'].str.strip() == date_str) &
+                    (df['Action'].str.lower() == action.lower())
+                )
+                if mask.any():
+                    flash(f"You have already performed '{action}' today.", 'warning')
+                    return redirect(url_for('index'))
+            except Exception as e:
+                app.logger.error(f"Error checking for duplicate action: {e}")
+                flash('Failed to check for duplicate actions.', 'danger')
+                return redirect(url_for('index'))
+
+        
+    BYPASS_TIME_IN_ACTIONS = ['halfday_time_in', 'halfday_time_out']
+
+    if action.lower() not in ['time_in'] + BYPASS_TIME_IN_ACTIONS:
         # Check if user has a Time-In entry without End Time
         if os.path.isfile(LOG_FILE):
             try:
@@ -251,6 +400,7 @@ def submit():
         else:
             flash('You must Time-In before performing other actions.', 'warning')
             return redirect(url_for('index'))
+        
     if action.lower() == 'time_in':
         # Existing Time-In logic
         current_time = timestamp.time()
@@ -402,6 +552,14 @@ def submit():
 
         flash(flash_msg, 'info')
         return redirect(url_for('index'))
+    
+    elif action.lower() in ['halfday_time_in', 'halfday_time_out']:
+        if action.lower() == 'halfday_time_in':
+            # Handle Halfday Time-In
+            return handle_halfday_time_in(employee_id, name, group, timestamp, date_str, time_str)
+        elif action.lower() == 'halfday_time_out':
+            # Handle Halfday Time-Out
+            return handle_halfday_time_out(employee_id, name, group, timestamp, date_str, time_str)
 
     elif action.lower() == 'time_out':
         # Check if user has a Time-In entry without End Time
@@ -556,6 +714,37 @@ def submit():
     else:
         flash('Invalid action selected.', 'danger')
         return redirect(url_for('index'))
+
+
+def handle_break_action(employee_id, name, group, action, timestamp, date_str, time_str):
+    """
+    Handles break actions by recording them without duplication restrictions.
+    """
+    # Initialize log ID
+    new_id = get_next_log_id()
+
+    # Log the data
+    data = {
+        'ID': new_id,
+        'Employee ID': int(employee_id),
+        'Name': name,
+        'Group': group.upper(),
+        'Action': action,
+        'Date': date_str,
+        'Start Time': time_str,
+        'End Time': '',
+        'Time Consumed': '',
+        'Shift': '',
+        'Lateness Duration': '',
+        'Status': ''
+    }
+
+    # Append to log.csv
+    append_to_log_file(data)
+
+    flash(f"Action '{action}' recorded for {name} on {date_str} at {time_str}.", 'info')
+    return redirect(url_for('index'))
+
 
 # New route to handle 'Back to Work'
 @app.route('/attendance/back_to_work', methods=['POST'])
@@ -812,6 +1001,22 @@ def report():
             df = df.sort_values(by='ID', ascending=False)
             data = df.values.tolist()
             headers = df.columns.tolist()
+
+            # Identify the index of the 'Action' column
+            try:
+                action_idx = headers.index('Action')
+            except ValueError:
+                app.logger.error("'Action' column not found in the log file.")
+                flash("'Action' column is missing from the log data.", 'danger')
+                data = []
+                headers = []
+                return render_template('report.html', data=data, headers=headers)
+
+            # Replace 'Halfday_Time_In' and 'Halfday_Time_Out' with 'Halfday_Time_In/Halfday_Time_Out'
+            for row in data:
+                if row[action_idx] in ['Halfday_Time_In', 'Halfday_Time_Out']:
+                    row[action_idx] = 'Halfday_Time_In/Halfday_Time_Out'
+
         except Exception as e:
             app.logger.error(f"Error reading log file: {e}")
             flash('Failed to load attendance data.', 'danger')
@@ -823,6 +1028,7 @@ def report():
 
     return render_template('report.html', data=data, headers=headers)
 
+
 @app.route('/attendance/export')
 @login_required
 def export():
@@ -833,40 +1039,68 @@ def export():
             df = df.fillna('')  # Replace NaN with empty string
             df = df.sort_values(by='ID', ascending=False)
 
+            # Define break actions
+            BREAK_ACTIONS = ["Recite Sutra", "Toilet", "Smoke", "BREAK1", "BREAK2"]
+            HALFDAY_ACTIONS = ["Halfday_Time_In", "Halfday_Time_Out"]
+
+            # Separate regular attendance and breaks
+            attendance_df = df[~df['Action'].isin(BREAK_ACTIONS + HALFDAY_ACTIONS)]
+            breaks_df = df[df['Action'].isin(BREAK_ACTIONS)]
+            halfday_df = df[df['Action'].isin(HALFDAY_ACTIONS)]
+
             # Create a BytesIO buffer to hold the Excel file in memory
             output = BytesIO()
 
             # Use ExcelWriter with openpyxl engine
             with pd.ExcelWriter(output, engine='openpyxl') as writer:
-                df.to_excel(writer, index=False, sheet_name='Attendance Report')
+                # Write regular attendance to 'Attendance' sheet
+                attendance_df.to_excel(writer, index=False, sheet_name='Attendance')
 
-                # Access the workbook and worksheet
+                # Write breaks to 'Breaks' sheet
+                breaks_df.to_excel(writer, index=False, sheet_name='Breaks')
+
+                # Write half-day actions to 'Halfday' sheet
+                halfday_df.to_excel(writer, index=False, sheet_name='Halfday')
+
+                # Access the workbook and worksheets
                 workbook = writer.book
-                worksheet = writer.sheets['Attendance Report']
+                attendance_sheet = writer.sheets['Attendance']
+                breaks_sheet = writer.sheets['Breaks']
 
                 # Define the fills for highlighting
                 late_fill = PatternFill(start_color='FDEF81', end_color='FDEF81', fill_type='solid')  # Light yellow fill
                 overbreak_fill = PatternFill(start_color='FF9999', end_color='FF9999', fill_type='solid')  # Light red fill
 
-                # Check if 'Status' column exists
-                if 'Status' not in df.columns:
-                    app.logger.error("'Status' column not found in the CSV.")
-                    flash("'Status' column is missing from the data.", 'danger')
+                # Function to apply conditional formatting
+                def apply_conditional_formatting(sheet, status_column):
+                    for row_idx, status in enumerate(sheet.iter_rows(min_row=2, max_col=sheet.max_column, max_row=sheet.max_row), start=2):
+                        cell_status = sheet.cell(row=row_idx, column=sheet.max_row).value  # Assuming 'Status' is the last column
+                        fill = None
+                        if str(status).strip().lower() == 'late':
+                            fill = late_fill
+                        elif str(status).strip().lower() == 'overbreak':
+                            fill = overbreak_fill
+
+                        if fill:
+                            for col in range(1, sheet.max_column + 1):
+                                cell = sheet.cell(row=row_idx, column=col)
+                                cell.fill = fill
+
+                # Apply formatting to 'Attendance' sheet
+                if 'Status' in attendance_df.columns:
+                    apply_conditional_formatting(attendance_sheet, 'Status')
+                else:
+                    app.logger.error("'Status' column not found in the Attendance sheet.")
+                    flash("'Status' column is missing from the Attendance data.", 'danger')
                     return redirect(url_for('report'))
 
-                # Iterate over the DataFrame to apply the fills
-                for row_idx, status in enumerate(df['Status'], start=2):  # start=2 to skip header
-                    fill = None
-                    if str(status).strip().lower() == 'late':
-                        fill = late_fill
-                    elif str(status).strip().lower() == 'overbreak':
-                        fill = overbreak_fill
-
-                    if fill:
-                        # Apply the fill to the entire row
-                        for col in range(1, len(df.columns) + 1):
-                            cell = worksheet.cell(row=row_idx, column=col)
-                            cell.fill = fill
+                # Apply formatting to 'Breaks' sheet (if needed)
+                if 'Status' in breaks_df.columns:
+                    apply_conditional_formatting(breaks_sheet, 'Status')
+                else:
+                    app.logger.error("'Status' column not found in the Breaks sheet.")
+                    flash("'Status' column is missing from the Breaks data.", 'danger')
+                    return redirect(url_for('report'))
 
             # Seek to the beginning of the BytesIO buffer
             output.seek(0)
@@ -888,6 +1122,7 @@ def export():
         flash('No attendance data available to export.', 'warning')
 
     return redirect(url_for('report'))
+
 
 @app.route('/attendance/logout')
 @login_required

@@ -53,6 +53,10 @@
                             <option value="Smoke">Smoke</option>
                             <option value="BREAK1">BREAK1</option>
                             <option value="BREAK2">BREAK2</option>
+                            <!-- <option value="Back to Work">Back to Work</option> -->
+                            <option value="halfday_time_in" title="Clock in for a half-day shift">Halfday Time-In</option>
+                            <option value="halfday_time_out" title="Clock out from a half-day shift">Halfday Time-Out</option>
+                            
                         </select>
                     </div>
                     <button type="submit"
@@ -121,7 +125,7 @@
             var selectedAction = this.value;
             var form = document.getElementById('attendance-form');
             if (actionsWithBackToWork.includes(selectedAction)) {
-                form.target = '_blank';
+                form.target = '_self';
             } else {
                 form.target = '_self';
             }
