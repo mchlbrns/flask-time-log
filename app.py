@@ -303,8 +303,8 @@ def append_to_log_file(data):
     file_exists = os.path.isfile(LOG_FILE)
     try:
         with open(LOG_FILE, 'a', newline='', encoding='utf-8') as csvfile:
-            fieldnames = ['ID', 'Employee ID', 'Name', 'Group', 'Action', 'Date', 
-                          'Start Time', 'End Time', 'Time Consumed', 'Shift', 
+            fieldnames = ['ID', 'Employee ID', 'Name', 'Group', 'Action', 'Date',
+                          'Start Time', 'End Time', 'Time Consumed', 'Shift',
                           'Lateness Duration', 'Status']
             csvwriter = csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_ALL)
             if not file_exists:
@@ -371,7 +371,7 @@ def submit():
                 flash('Failed to check for duplicate actions.', 'danger')
                 return redirect(url_for('index'))
 
-        
+
     BYPASS_TIME_IN_ACTIONS = ['halfday_time_in', 'halfday_time_out']
 
     if action.lower() not in ['time_in'] + BYPASS_TIME_IN_ACTIONS:
@@ -400,7 +400,7 @@ def submit():
         else:
             flash('You must Time-In before performing other actions.', 'warning')
             return redirect(url_for('index'))
-        
+
     if action.lower() == 'time_in':
         # Existing Time-In logic
         current_time = timestamp.time()
@@ -418,8 +418,8 @@ def submit():
                 special_expected_time_am = time(12, 0)
                 special_expected_time_pm = None
         elif group in {'mqm', 'mkm', 'trainer'}:
-            special_expected_time_am = time(8, 30)  # Day shift
-            special_expected_time_pm = time(20, 30)  # Night shift
+            special_expected_time_am = time(8, 45)  # Day shift
+            special_expected_time_pm = time(20, 45)  # Night shift
         elif group == 'office boy':
             special_expected_time_am = time(9, 0)
             special_expected_time_pm = time(21, 0)
@@ -552,7 +552,7 @@ def submit():
 
         flash(flash_msg, 'info')
         return redirect(url_for('index'))
-    
+
     elif action.lower() in ['halfday_time_in', 'halfday_time_out']:
         if action.lower() == 'halfday_time_in':
             # Handle Halfday Time-In
@@ -710,7 +710,7 @@ def submit():
 
         # Return a page with 'Back to Work' button
         return render_template('back_to_work.html', identifier=identifier, action=action)
-    
+
     else:
         flash('Invalid action selected.', 'danger')
         return redirect(url_for('index'))
